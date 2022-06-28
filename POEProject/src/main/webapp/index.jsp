@@ -11,9 +11,8 @@
          return n*fact(n-1);
    }
 %>
-<%    
-    str = request.getParameter("val");    
-    n = Long.parseLong(str);   
+<%  
+    n=4;
     result = fact(n);
 %>
 <b>Factorial value: </b> <%= result %>
