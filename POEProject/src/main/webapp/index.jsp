@@ -1,5 +1,21 @@
 <html>
 <body>
-<h2>Hello World!</h2>
+<%!
+   long n, result;
+   String str;
+
+   long fact(long n) {
+      if(n==0)        
+         return 1;   
+      else
+         return n*fact(n-1);
+   }
+%>
+<%    
+    str = request.getParameter("val");    
+    n = Long.parseLong(str);   
+    result = fact(n);
+%>
+<b>Factorial value: </b> <%= result %>
 </body>
 </html>
